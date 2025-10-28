@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ticket index{% endblock %}
+
+{% block main %}
+<main>
+    <h1>Ticket index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Clefclient</th>
+                <th>Clefticket</th>
+                <th>NombreDePlace</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ticket in tickets %}
+            <tr>
+                <td>{{ ticket.clefclient }}</td>
+                <td>{{ ticket.clefticket }}</td>
+                <td>{{ ticket.nombreDePlace }}</td>
+                <td>
+                    <a href="{{ path('app_ticket_show', {'id': ticket.id}) }}">show</a>
+                    <a href="{{ path('app_ticket_delete', {'id': ticket.id}) }}">delete</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+  {% if totalPages >= 1 %}
+    <aside class='pagination'>
+      <a href="{{ path('app_ticket_index', {'page': currentPage - 1}) }}"><</a>
+      <a href="{{ path('app_ticket_index', {'page': currentPage + 1}) }}">></a>
+    </aside>
+</main>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+main a {
+  padding: 8px 15px; 
+  background-color: beige;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+main a:hover {
+  color: gray;
+}

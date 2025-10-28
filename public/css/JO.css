@@ -1,0 +1,68 @@
+:root {
+  font-family: LibreFranklin-Light;
+
+  --header-nav-main-padding-top: 10px;
+
+  --body-font-size: 1rem;
+  --h1-font-size: 1.6rem;
+  --nav-item-font-size: 1.2rem;
+
+  --content-margin: 6px;
+
+  --mobile-body-font-size: 1rem;
+  --mobile-h1-font-size: 2.4rem;
+  --mobile-menu-font-size: 2.8rem;
+  --mobile-nav-item-font-size: 3rem;
+}
+@font-face { 
+  font-family: LibreFranklin-Light; 
+  src: url('../Police/LibreFranklin-Light.ttf');
+}
+main {
+  margin: 0px;
+}
+header, nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+header {
+  padding: 8px 0;
+  width: 100%;
+  background-color: rgba(255, 217, 0, 0.745);
+}
+nav {
+  width: 400px;
+  align-items: center;
+}
+nav a {
+  font-size: 1.2rem;
+  width: 150px;
+  height: fit-content;
+  text-align: center;
+}
+
+
+article {
+  margin: var(--content-margin);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #1e1e1e;
+}
+
+
+@media (width < 1200px) {
+  nav {
+    width: 100%;
+  }
+  p, span, a, ul, li, td, th, label, input, textarea, time, strong, div {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 3.25rem;
+  }
+}

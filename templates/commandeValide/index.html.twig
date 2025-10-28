@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boutique{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/commandeValide.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+  <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
+  <script src="{{ asset('js/payementTicket.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+<main>
+  <h2>ACHAT ACCEPTE</h2>
+  <p>Vous trouverez dans votre email les QR code de vos tickets</p>
+</main>
+{% endblock %}

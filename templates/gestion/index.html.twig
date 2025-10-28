@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/gestion.css') }}">
+{% endblock %}
+
+
+{% block main %}
+<main>
+  <a href="/ticket">Tickets</a>
+  <a href="/offreticket">Offre tickets</a>
+  <a href="/user">Utilisateurs</a>
+</main>
+{% endblock %}

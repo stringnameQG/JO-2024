@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Offreticket{% endblock %}
+
+{% block main %}
+    <h1>Offreticket</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ offreticket.id }}</td>
+            </tr>
+            <tr>
+                <th>NomOffre</th>
+                <td>{{ offreticket.nomOffre }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ offreticket.prix }}</td>
+            </tr>
+            <tr>
+                <th>CompteurOffreVendue</th>
+                <td>{{ offreticket.compteurOffreVendue }}</td>
+            </tr>
+            <tr>
+                <th>NombrePlace</th>
+                <td>{{ offreticket.nombrePlace }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_offreticket_index') }}">back to list</a>
+
+    <a href="{{ path('app_offreticket_edit', {'id': offreticket.id}) }}">edit</a>
+
+    {{ include('offreticket/_delete_form.html.twig') }}
+{% endblock %}

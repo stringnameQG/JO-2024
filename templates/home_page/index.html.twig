@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/home_page.css') }}">
+{% endblock %}  
+
+{% block main %}
+  <main>
+    <img decoding="async" class="logo" src="{{ asset('Image/Logo-JO-Paris.png') }}">
+    <span class="presentation">Du 26 juillet au 11 août 2024, Paris accueille les Jeux Olympiques pour la troisième fois de son histoire, après 1900 et 1924. Cet événement exceptionnel marque le retour des JO en France après un siècle d’attente, transformant la capitale française en un théâtre mondial de performances sportives, d’innovation et de partage.</span>
+    <article class="epreuve">
+      <h3 class="titre">Basketball 3x3</h3>
+      <img decoding="async" class="" src="{{ asset('Image/epreuves/basketball-1V1.jpg') }}">
+      <p class"decription">Le basket 3x3 est une version passionnante, urbaine et novatrice du basket, qui se joue avec trois joueurs par équipe sur un demi-terrain, où se trouve un cerceau et une planche arrière. Il est considéré comme le sport collectif urbain le plus populaire au monde.</p>
+    </article>
+    <article class="epreuve">
+      <h3 class="titre">Boxe</h3>
+      <img decoding="async" class="" src="{{ asset('Image/epreuves/boxe.jpg') }}">
+      <p class"decription">La boxe est une forme de combat à mains nues où un athlète essaye de porter des coups de poing à la tête ou au corps (au-dessus de la taille) de son adversaire afin de marquer des points, décomptés par les juges, ou de faire en sorte que son adversaire soit incapable de poursuivre le combat.</p>
+    </article>
+    <article class="epreuve">
+      <h3 class="titre">Cycliste</h3>
+      <img decoding="async" class="" src="{{ asset('Image/epreuves/cyclist.jpg') }}">
+      <p class"decription">Le cyclisme sur route comprend des courses de masse en ligne ou des contre-la-montre sur des routes généralement goudronnées, mais aussi parfois sur des pavés ou, très rarement, sur du gravier.</p>
+    </article>
+    <article class="epreuve">
+      <h3 class="titre">Gymnastique</h3>
+      <img decoding="async" class="" src="{{ asset('Image/epreuves/gymnastique.jpg') }}">
+      <p class"decription">La gymnastique acrobatique existe sous différentes formes et dans différentes cultures depuis des milliers d’années. Pour preuve, des représentations d’acrobaties, remontant à l’âge de bronze, ont été retrouvées sur des oeuvres d’art.</p>
+    </article>
+    <article class="epreuve">
+      <h3 class="titre">Escrime</h3>
+      <img decoding="async" class="" src="{{ asset('Image/epreuves/Escrime.jpg') }}">
+      <p class"decription">L’escrime est un sport de combat dans lequel deux athlètes utilisent des armes blanches pour s’attaquer et se défendre dans le but de frapper son adversaire et, donc, de marquer des points.</p>
+    </article>
+    <article class="epreuve">
+      <h3 class="titre">Volleyball de plage</h3>
+      <img decoding="async" class="" src="{{ asset('Image/epreuves/beach-volleyball.jpg') }}">
+      <p class"decription">Le volleyball de plage olympique est un sport d’équipe pratiqué par deux joueurs de chaque côté d’un terrain de sable divisé par un filet. L’objectif du sport est d’envoyer le ballon - uniquement avec les mains ou les bras.</p>
+    </article>
+  </main>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>JO-2024 {% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ asset('css/JO.css') }}">
+  {% block stylesheets %}{% endblock %}
+
+  {% block javascripts %}{% endblock %}
+</head>
+
+{% block scripts %}{% endblock %}
+
+<body>
+  <header>
+    <nav>
+      <a href="/tickets">Tickets</a>
+      <a href="/"><img src="{{ asset('Image/logo_color.svg') }}"></a>
+      {% if is_granted('ROLE_USER') %} 
+        <a href="/logout">Déconnexion</a>
+      {% else %}
+        <a href="/login">Se connecter</a>
+      {% endif %} 
+      {% if is_granted('ROLE_ADMIN') %} 
+        <a href="/gestion">Gestion</a>
+      {% endif %} 
+    </nav>
+  </header>
+  {% block main %}{% endblock %}
+  <footer>
+  </footer>
+</body>
+</html>

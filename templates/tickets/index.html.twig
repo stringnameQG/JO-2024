@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boutique{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/tickets.css') }}">
+{% endblock %}  
+
+{% block javascripts %}
+  <script src="{{ asset('js/stockageTicket.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+<main>
+  <div>
+  {% for offreticket in offretickets %}
+    <article>
+      <h3>{{ offreticket.nomOffre }}</h3>  
+      <p>{{ offreticket.nombrePlace }} tickets</p>
+      <p>{{ offreticket.prix }} €</p>
+      <input value="0" type="number" id="nombreDePlace{{ offreticket.id }}" name="ticket[nombreDePlace]" required="required" min="0" max="100">
+    </article>
+  {% else %}
+    <p>no records found</p>
+  {% endfor %}
+  </div>
+  {% if app.user %}
+    <a id="valider" href="/commandevalide">Valider ma commande</a>
+  {% else %}
+    <a href="/login">Me connecter pour valider ma commande</a>
+  {% endif %}   
+</main>
+{% endblock %}

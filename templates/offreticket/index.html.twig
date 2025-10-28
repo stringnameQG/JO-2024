@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+
+{% block main %}
+<main>
+    <h1>Offreticket index</h1>
+
+    <a href="{{ path('app_offreticket_new') }}">Create new</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NomOffre</th>
+                <th>Prix</th>
+                <th>CompteurOffreVendue</th>
+                <th>NombrePlace</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offreticket in offretickets %}
+            <tr>
+                <td>{{ offreticket.nomOffre }}</td>
+                <td>{{ offreticket.prix }} €</td>
+                <td>{{ offreticket.compteurOffreVendue }}</td>
+                <td>{{ offreticket.nombrePlace }}</td>
+                <td>
+                    <a href="{{ path('app_offreticket_edit', {'id': offreticket.id}) }}">edit</a>
+                    <a href="{{ path('app_offreticket_show', {'id': offreticket.id}) }}">show</a>
+                    <a href="{{ path('app_offreticket_delete', {'id': offreticket.id}) }}">delete</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+  {% if totalPages >= 1 %}
+    <aside class='pagination'>
+      <a href="{{ path('app_offreticket_index', {'page': currentPage - 1}) }}"><</a>
+      <a href="{{ path('app_offreticket_index', {'page': currentPage + 1}) }}">></a>
+    </aside>
+</main>
+  {% endif %}
+{% endblock %}

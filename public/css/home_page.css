@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.logo {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+.epreuve {
+  width: calc((100vw - 320px) / 6);
+  min-width: 280px;
+  height: max-content;
+  max-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.epreuve img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 550px;
+  height: 550px;
+  min-height: 550px;
+}
+.epreuve h3 {
+  width: 100%;
+  text-align: center;
+  color: #383838;
+}
+
+
+
+
+@media (width < 1200px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .epreuve {
+    width: calc(100vw - 20px);
+    min-width: 290px;
+    max-height: 100vh;
+  }
+}

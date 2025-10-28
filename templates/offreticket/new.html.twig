@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Offreticket{% endblock %}
+
+{% block main %}
+    <h1>Create new Offreticket</h1>
+
+    {{ include('offreticket/_form.html.twig') }}
+
+    <a href="{{ path('app_offreticket_index') }}">back to list</a>
+{% endblock %}
